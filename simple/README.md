@@ -1,5 +1,8 @@
 # Simple Example
 
+## Summary
+An example of 3-D visualization on ParaView.
+
 ## Usage
 
 ``` 

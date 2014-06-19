@@ -1,4 +1,7 @@
-# Gray-Scott model - Sample of Visualization with ParaView 
+# Gray-Scott model
+
+## Summary
+An example of 2-D visualization on ParaView.
 
 ## Usage
 
