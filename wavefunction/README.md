@@ -23,8 +23,13 @@ $ ruby wavefunction.rb
 "Save Screenshot" in File menu gives you the following pictures.
 
 2pz
+
 ![2pz](2pz.png)
+
 3dz2
+
 ![3dz2](3dz2.png)
+
 3dzx
+
 ![3dzx](3dzx.png)
