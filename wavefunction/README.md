@@ -16,9 +16,15 @@ $ ruby wavefunction.rb
 3. "Rescale to Data Range" in Display at Object Inspector
 4. Open Color Scale Editor via "Edit Color Map". Here is an sample of color map for 3dzx.vtk
 
-![Image1](colormap.png)
+![ColorMap](colormap.png)
 
 ## Samples of Visualization
-![Image1](2pz.png)
-![Image2](3dz2.png)
-![Image3](3dzx.png)
+
+"Save Screenshot" in File menu gives you the following pictures.
+
+2pz
+![2pz](2pz.png)
+3dz2
+![3dz2](3dz2.png)
+3dzx
+![3dzx](3dzx.png)
