@@ -2,17 +2,21 @@ grid = 10
 dim = grid*2+1
 points = dim**3
 r = 0.8
-puts "# vtk DataFile Version 1.0"
-puts "test"
-puts "ASCII"
-puts "DATASET STRUCTURED_POINTS"
-printf "DIMENSIONS %d %d %d\n",dim, dim, dim
-puts "ORIGIN 0.0 0.0 0.0"
-puts "ASPECT_RATIO 1.0 1.0 1.0"
-puts
-puts "POINT_DATA " + points.to_s
-puts "SCALARS scalars float"
-puts "LOOKUP_TABLE default"
+
+puts <<"EOS"
+# vtk DataFile Version 1.0
+test
+ASCII
+DATASET STRUCTURED_POINTS
+DIMENSIONS #{dim} #{dim} #{dim}
+ORIGIN 0.0 0.0 0.0
+ASPECT_RATIO 1.0 1.0 1.0
+
+POINT_DATA #{points}
+SCALARS scalars float
+LOOKUP_TABLE default
+EOS
+
 for ix in -grid..grid
   for iy in -grid..grid
     for iz in -grid..grid
