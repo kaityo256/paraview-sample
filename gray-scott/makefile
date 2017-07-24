@@ -2,8 +2,9 @@ TARGET=gs
 CC=g++
 CPPFLAGS=-O3
 
-$(TARGET): main.cc
+$(TARGET): main.cpp
 	$(CC) $(CPPFLAGS) $< -o $@
 
 clean:
 		rm -f $(TARGET)
+
