@@ -6,7 +6,7 @@ An example of 3-D visualization on ParaView.
 ## Usage
 
 ``` 
-$ ruby sample.rb > sample.vtk
+$ ruby simple.rb > simple.vtk
 ``` 
 
 ## Visualization
@@ -19,4 +19,4 @@ $ ruby sample.rb > sample.vtk
 
 4. It gives you the following image.
 
-![sample.png](sample.png)
+![simple.png](simple.png)
