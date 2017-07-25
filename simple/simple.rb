@@ -13,13 +13,14 @@ ORIGIN 0.0 0.0 0.0
 SPACING 1.0 1.0 1.0
 
 POINT_DATA #{points}
-SCALARS scalars float
+
+SCALARS intensity float
 LOOKUP_TABLE default
 EOS
 
-for ix in -grid..grid
-  for iy in -grid..grid
-    for iz in -grid..grid
+(-grid..grid).each do |iz|
+  (-grid..grid).each do |iy|
+    (-grid..grid).each do |ix|
     x = ix.to_f/grid
     y = iy.to_f/grid
     z = iz.to_f/grid
