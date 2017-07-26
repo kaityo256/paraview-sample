@@ -1,11 +1,10 @@
-# vtk DataFile Version 1.0
+# vtk DataFile Version 1.0"
 Wavefunction
 ASCII
 DATASET STRUCTURED_POINTS
 DIMENSIONS 21 21 21
 ORIGIN 0.0 0.0 0.0
-ASPECT_RATIO 1.0 1.0 1.0
-
+SPACING 1.0 1.0 1.0
 POINT_DATA 9261
 SCALARS scalars float
 LOOKUP_TABLE default

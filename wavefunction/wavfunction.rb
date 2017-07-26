@@ -1,28 +1,30 @@
 def export_vtk(filename,p)
-  f = open(filename,"w")
   puts filename
   grid = 10
   dim = grid*2+1
   points = dim**3
-  f.puts "# vtk DataFile Version 1.0"
-  f.puts "Wavefunction"
-  f.puts "ASCII"
-  f.puts "DATASET STRUCTURED_POINTS"
-  f.puts "DIMENSIONS #{dim} #{dim} #{dim}"
-  f.puts "ORIGIN 0.0 0.0 0.0"
-  f.puts "ASPECT_RATIO 1.0 1.0 1.0"
-  f.puts
-  f.puts "POINT_DATA " + points.to_s
-  f.puts "SCALARS scalars float"
-  f.puts "LOOKUP_TABLE default"
-  for iz in -grid..grid
-    for iy in -grid..grid
-      for ix in -grid..grid
-      x = ix.to_f/grid
-      y = iy.to_f/grid
-      z = iz.to_f/grid
-      r = (x*x + y*y + z*z)**0.5
-      f.puts p.call(x,y,z,r)
+  open(filename,"w") do |f|
+    f.puts <<"EOS"
+# vtk DataFile Version 1.0"
+Wavefunction
+ASCII
+DATASET STRUCTURED_POINTS
+DIMENSIONS #{dim} #{dim} #{dim}
+ORIGIN 0.0 0.0 0.0
+SPACING 1.0 1.0 1.0
+POINT_DATA #{points}
+SCALARS scalars float
+LOOKUP_TABLE default
+EOS
+    for iz in -grid..grid
+      for iy in -grid..grid
+        for ix in -grid..grid
+          x = ix.to_f/grid
+          y = iy.to_f/grid
+          z = iz.to_f/grid
+          r = (x*x + y*y + z*z)**0.5
+          f.puts p.call(x,y,z,r)
+        end
       end
     end
   end
