@@ -15,7 +15,7 @@ $ ruby simple.rb > simple.vtk
 2. Choose Volume
 3. Change Color Scale (refer the following image)
 
-![Color Scale](colorscale.png)
+![Color Scale](colormapeditor.png)
 
 4. It gives you the following image.
 
