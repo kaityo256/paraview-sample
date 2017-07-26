@@ -23,9 +23,9 @@ vp.each do |v|
   puts "#{v.y} #{-v.x} #{0}"
 end
 
-puts "SCALARS length float"
+puts "SCALARS z float"
 puts "LOOKUP_TABLE defalut"
 vp.each do |v|
-  puts "#{Math.sqrt(v.x**2 + v.y**2)}"
+  puts "#{v.z}"
 end
 

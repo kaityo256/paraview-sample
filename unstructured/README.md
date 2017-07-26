@@ -12,7 +12,7 @@ $ ruby sphere.rb > sphere.vtk
 ## Visualization
 
 1. Open file sphere.vtk in ParaView, and Apply Glyph
-2. Choose scalar in Scale Mode  and Apply
-3. It gives you the following image.
+2. Choose vector in Scale Mode and Apply
+3. Then you will obtain the following image.
 
 ![sphere.png](sphere.png)
