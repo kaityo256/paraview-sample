@@ -1,7 +1,7 @@
 # Make -j Example
 
 ## Summary
-An example of using make -j.
+An sample of using make -j.
 
 ## Usage
 
