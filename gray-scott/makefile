@@ -1,8 +1,8 @@
 TARGET=gs
 CC=g++
-CPPFLAGS=-O3
+CPPFLAGS=-O3 -Wall -Wextra
 
-$(TARGET): main.cpp
+$(TARGET): gs.cpp
 	$(CC) $(CPPFLAGS) $< -o $@
 
 clean:
