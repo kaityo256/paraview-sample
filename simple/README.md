@@ -23,7 +23,7 @@ Then you will obtain `simple.vtk`.
 2. Choose Volume
 3. Change Color Scale (refer the following image)
 
-![Color Scale](colormapeditor.png)
+![Color Scale](result/colormapeditor.png)
 
 4. It gives you the following image.
 
