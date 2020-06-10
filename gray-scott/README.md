@@ -29,4 +29,4 @@ The Governing equation is the following Gray-Scott model.
 
 ![GS Equation](result/gs_eq.png)
 
-Parameters: L=80*80; F=0.04; k = 0.06075; Du = 0.05; Dv = 0.1; dt = 0.2; 1frame/100steps; 200 frames; Total 20000 steps. 
+Parameters: L=80*80; F=0.04; k = 0.06075; Du = 0.05; Dv = 0.1; dt = 0.2; 1frame/100steps; 150 frames; Total 15000 steps. 
