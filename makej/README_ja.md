@@ -172,11 +172,7 @@ clean:
 ![makej3.png](makej3.png)
 ![makej4.png](makej4.png)
 
-アニメーションGIFにするとこんな感じ。
-
-![makej.gif](https://qiita-image-store.s3.amazonaws.com/0/79744/70869935-171e-4d6f-3c22-a9e49544f889.gif)
-
-球が軌跡を描きながら動いていくような絵になる。
+アニメーションGIFにすると楽しい。
 
 ## まとめ
 

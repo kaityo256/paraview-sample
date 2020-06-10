@@ -34,6 +34,8 @@ A sample of Unsgructured Grid.
 
 ## [makej](makej)
 
+![makej](fig/makej.png)
+
 A sample of using `make -j`.
 
 # License
