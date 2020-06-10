@@ -16,7 +16,7 @@ $ ruby wavefunction.rb
 3. "Rescale to Data Range" in Display at Object Inspector
 4. Open Color Map Editor and choose color map. Here is a sample of color map for 2pz.vtk
 
-![colormap.png](colormap.png)
+![colormap.png](result/colormap.png)
 
 ## Samples of Visualization
 
@@ -24,12 +24,12 @@ $ ruby wavefunction.rb
 
 2pz
 
-![2pz](2pz.png)
+![2pz](result/2pz.png)
 
 3dz2
 
-![3dz2](3dz2.png)
+![3dz2](result/3dz2.png)
 
 3dzx
 
-![3dzx](3dzx.png)
+![3dzx](result/3dzx.png)
