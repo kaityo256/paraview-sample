@@ -24,10 +24,10 @@ def export_vtk(filename, p):
 Wavefunction
 ASCII
 DATASET STRUCTURED_POINTS
-DIMENSIONS #{dim} #{dim} #{dim}
+DIMENSIONS {dim} {dim} {dim}
 ORIGIN 0.0 0.0 0.0
 SPACING 1.0 1.0 1.0
-POINT_DATA #{points}
+POINT_DATA {points}
 SCALARS scalars float
 LOOKUP_TABLE default\
   """)

@@ -5,9 +5,16 @@ An example of 3-D visualization on ParaView.
 
 ## Usage
 
+```sh
+ruby wavefunction.rb
 ```
-$ ruby wavefunction.rb
+
+or
+
+```sh
+python wavefunction.py
 ```
+
 
 ## Visualization
 
