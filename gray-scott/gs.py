@@ -85,10 +85,7 @@ def save_as_vtk(filename, img):
         f.write(f"{img[i]:.03f}\n")
 
 
-imgs = simulation(80, 1000)
+imgs = simulation(80, 12000)
 
 for i in range(len(imgs)):
     save_as_vtk(f"conf{i:03}.vtk", imgs[i])
-
-# imgs = simulation(80, 15000)
-# save_imgs(imgs)

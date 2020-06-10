@@ -1,6 +1,6 @@
-#include <iostream>
-#include <iomanip>
 #include <fstream>
+#include <iomanip>
+#include <iostream>
 
 const int L = 80;
 const double F = 0.04;
@@ -24,31 +24,31 @@ void init(double u[L][L], double v[L][L]) {
   }
 }
 
-double calcU (double tu, double tv) {
+double calcU(double tu, double tv) {
   return tu * tu * tv - (F + k) * tu;
 }
 
-double calcV (double tu, double tv) {
+double calcV(double tu, double tv) {
   return -tu * tu * tv + F * (1.0 - tv);
 }
 
-double laplacian(int ix,int iy,double s[L][L]){
+double laplacian(int ix, int iy, double s[L][L]) {
   double ts = 0.0;
   ts += s[ix - 1][iy];
   ts += s[ix + 1][iy];
-  ts += s[ix][iy-1];
-  ts += s[ix][iy+1];
+  ts += s[ix][iy - 1];
+  ts += s[ix][iy + 1];
   ts -= 4.0 * s[ix][iy];
   return ts;
 }
 
-void calc(double u2[L][L], double v2[L][L], double u[L][L], double v[L][L] ) {
+void calc(double u2[L][L], double v2[L][L], double u[L][L], double v[L][L]) {
   for (int ix = 1; ix < L - 1; ix++) {
     for (int iy = 1; iy < L - 1; iy++) {
       double du = 0;
       double dv = 0;
-      du = Du*laplacian(ix,iy,u);
-      dv = Dv*laplacian(ix,iy,v);
+      du = Du * laplacian(ix, iy, u);
+      dv = Dv * laplacian(ix, iy, v);
       du += calcU(u[ix][iy], v[ix][iy]);
       dv += calcV(u[ix][iy], v[ix][iy]);
       u2[ix][iy] = u[ix][iy] + du * dt;
@@ -57,7 +57,7 @@ void calc(double u2[L][L], double v2[L][L], double u[L][L], double v[L][L] ) {
   }
 }
 
-void save_as_vtk(double u[L][L]){
+void save_as_vtk(double u[L][L]) {
   static int index = 0;
   char filename[256];
   sprintf(filename, "conf%03d.vtk", index);
@@ -66,9 +66,9 @@ void save_as_vtk(double u[L][L]){
   std::ofstream ofs(filename);
   ofs << "# vtk DataFile Version 1.0" << std::endl;
   ofs << filename << std::endl;
-  ofs << "ASCII" << std::endl; 
+  ofs << "ASCII" << std::endl;
   ofs << "DATASET UNSTRUCTURED_GRID" << std::endl;
-  ofs << "POINTS " << L*L << " float" << std::endl;
+  ofs << "POINTS " << L * L << " float" << std::endl;
 
   for (int i = 0; i < L; i++) {
     for (int j = 0; j < L; j++) {
@@ -76,17 +76,17 @@ void save_as_vtk(double u[L][L]){
     }
   }
 
-  ofs << "CELLS "<< L * L << " " << L * L * 2 << std::endl;
+  ofs << "CELLS " << L * L << " " << L * L * 2 << std::endl;
   for (int i = 0; i < L * L; i++) {
     ofs << "1 " << i << std::endl;
   }
 
-  ofs << "CELL_TYPES "<< L*L << std::endl;
+  ofs << "CELL_TYPES " << L * L << std::endl;
   for (int i = 0; i < L * L; i++) {
     ofs << "1" << std::endl;
   }
 
-  ofs << "POINT_DATA " <<  L * L << std::endl;
+  ofs << "POINT_DATA " << L * L << std::endl;
   ofs << "SCALARS scalars float" << std::endl;
   ofs << "LOOKUP_TABLE default" << std::endl;
   ofs << std::fixed;
@@ -103,11 +103,11 @@ int main(void) {
   double v[L][L] = {};
   double u2[L][L] = {};
   double v2[L][L] = {};
-  init(u,v);
-  for (int i = 0; i < 15000; i++) {
-    if(i%2 == 0){
-      calc(u2,v2, u, v);
-    }else{
+  init(u, v);
+  for (int i = 0; i < 12000; i++) {
+    if (i % 2 == 0) {
+      calc(u2, v2, u, v);
+    } else {
       calc(u, v, u2, v2);
     }
     if (i % 100 == 0) {

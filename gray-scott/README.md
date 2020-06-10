@@ -5,9 +5,8 @@ An example of 2-D visualization on ParaView.
 
 ## Usage
 
-``` 
-$ make
-$ ./gs
+```sh
+python gs.py
 ``` 
 
 ## Visualization
@@ -29,4 +28,4 @@ The Governing equation is the following Gray-Scott model.
 
 ![GS Equation](result/gs_eq.png)
 
-Parameters: L=80*80; F=0.04; k = 0.06075; Du = 0.05; Dv = 0.1; dt = 0.2; 1frame/100steps; 150 frames; Total 15000 steps. 
+Parameters: L=80*80; F=0.04; k = 0.06075; Du = 0.05; Dv = 0.1; dt = 0.2; 1frame/100steps; 120 frames; Total 12000 steps. 
