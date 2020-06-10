@@ -15,4 +15,4 @@ $ ruby sphere.rb > sphere.vtk
 2. Choose vector in Scale Mode and Apply
 3. Then you will obtain the following image.
 
-![sphere.png](sphere.png)
+![sphere.png](result/sphere.png)
