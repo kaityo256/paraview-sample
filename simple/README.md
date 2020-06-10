@@ -5,9 +5,17 @@ An example of 3-D visualization on ParaView.
 
 ## Usage
 
-``` 
-$ ruby simple.rb > simple.vtk
-``` 
+```sh
+ruby simple.rb
+```
+
+or
+
+```sh
+python simple.py
+```
+
+Then you will obtain `simple.vtk`.
 
 ## Visualization
 
@@ -19,4 +27,4 @@ $ ruby simple.rb > simple.vtk
 
 4. It gives you the following image.
 
-![simple.png](simple.png)
+![simple.png](result/simple.png)
